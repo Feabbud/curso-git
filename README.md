@@ -23,13 +23,15 @@
   - --hard que volta para o commit anterior e esquece e apaga tudo que fizemos.
 - git diff: mostra as alterações do documento. --name-only: mostra quais arquivos foram alterados. nomeDoArquivo: mostra somente o arquivo que você passou o nome.
 - git revert HashDoCommit: faz um commit reverso do commit passado. Se o commit adicionou uma linha, ele apaga. Adicionou um arquivo, ele deleta.
-- git push origin :branchRemoto: deleta a branch passada no repositorio remoto.
-- git pull origin master: atualiza o repositório local com as modificações do repositório remoto, se existir.
 
 ## Conexão com o Github
 - No repositório que queremos enviar para o github  fizemos: git remote add origin linkRepositorioGitHub. 
 - git push -u origin master - envia as alterações do repositorio local para o repositorio remoto, que seria o github.
-- git fetch -u origin master - 
+- git fetch origin - pega todos os dados do repositório remoto que ainda não temos no nosso local mas não faz o merge.
+- git pull origin master: atualiza o repositório local com as modificações do repositório remoto e ja faz o merge automaticamente.
+- git push origin :branchRemoto: deleta a branch passada no repositorio remoto.
+- git remote -v: exibe os repositorios remotos e mostra sua URL..
+- git remote show nomeDoRemote: Lista informações completas do repositório remoto.
 
 ## Ignorando arquivos para o repositório remoto
  - criamos o arquivo .gitignore
